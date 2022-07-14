@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+  inputnode/.style={draw, circle, fill=red!50, inner sep=2pt},
+  outnode/.style={draw, circle, fill=orange!50, inner sep=2pt},
+  hiddenunit/.style={draw, circle, minimum size=10pt},
+  weights/.style={-stealth, thin, opacity=0.8},
+]
+  \node[inputnode] (x1) {$\mathrm{x}_1$};
+  \node[inputnode, above=of x1] (x0) {$\mathrm{x}_0$};
+  \node[inputnode, below=of x1] (x2) {$\mathrm{x}_2$};
+
+  \node[hiddenunit, right=of x1] (h2) {};
+  \node[hiddenunit, above=of h2] (h1) {};
+  \node[hiddenunit, above=of h1] (h0) {};
+  \node[hiddenunit, below=of h2] (h3) {};
+  \node[hiddenunit, below=of h3] (h4) {};
+
+  \node[outnode, right=of h2] (y0) {$\mathrm{y}$};
+
+  \foreach \x in {x0, x1, x2} {
+    \foreach \h in {h0, h1, h2, h3, h4} {
+      \draw[weights] (\x) -- (\h);
+    }
+  }
+  \foreach \h in {h0, h1, h2, h3, h4} {
+    \foreach \y in {y0} {
+      \draw[weights] (\h) -- (\y);
+    }
+  }
+\end{tikzpicture}

@@ -1,0 +1,135 @@
+\begin{tikzpicture}[scale=.4,every node/.style={minimum size=1cm}, on grid, line join=round]
+  \begin{scope}[
+      every node/.append style={yslant=-0.6}, yslant=-0.6]
+
+    \coordinate (L1) at (2,1);
+    \coordinate (L2) at ($ (L1)+(4,-3) $);
+    \coordinate (L3) at ($ (L1)+(3,-3) $);
+    \coordinate (L4) at ($ (L2)+(-3,3) $);
+    \coordinate (L5) at ($ (L1)+(-4,-4) $);
+
+    \fill[blue!40, opacity=.9] (L1) rectangle (L2);
+
+    \only<1>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (L1) rectangle (L3);
+    \only<3>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (L2) rectangle (L4);
+
+    \draw[black, very thick] (L1) rectangle (L2);
+    \draw[black, thin] (L1) grid (L2);
+  \end{scope}
+
+  \begin{scope}[
+      every node/.append style={yslant=0.4}, yslant=0.4]
+
+    \coordinate (R1) at (6,-5);
+    \coordinate (R2) at ($ (R1)+(4,-3) $);
+    \coordinate (R3) at ($ (R1)+(3,-3) $);
+    \coordinate (R4) at ($ (R2)+(-3,3) $);
+    \coordinate (R5) at ($ (R2)+(2,-1) $);
+    \coordinate (R6) at ($ (R1)+(-1,-4) $);
+
+    \fill[blue!40, opacity=.9] (R1) rectangle (R2);
+
+    \only<3>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (R1) rectangle (R3);
+    \only<4>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (R2) rectangle (R4);
+
+    \draw[black, very thick] (R1) rectangle (R2);
+    \draw[black, thin] (R1) grid (R2);
+  \end{scope}
+
+  \begin{scope}[
+      every node/.append style={yslant=-0.6,xslant=1.0},
+      yslant=-0.6,xslant=1.0]
+
+    \coordinate (IA) at (1,1);
+    \coordinate (IB) at (1,4);
+    \coordinate (IC) at (4,1);
+    \coordinate (ID) at (4,4);
+    \coordinate (IE) at (1,2);
+    \coordinate (IF) at (1,5);
+    \coordinate (IG) at (4,2);
+    \coordinate (IH) at (4,5);
+    \coordinate (II) at (2,1);
+    \coordinate (IJ) at (2,4);
+    \coordinate (IK) at (5,1);
+    \coordinate (IL) at (5,4);
+    \coordinate (IM) at (2,2);
+    \coordinate (IN) at (2,5);
+    \coordinate (IO) at (5,2);
+    \coordinate (IP) at (5,5);
+
+    \coordinate (I1) at (0,0);
+    \coordinate (I2) at (6,6);
+    \coordinate (I3) at (0,6);
+    \coordinate (I4) at (6,0);
+
+    \fill[blue!40, opacity=.9] (IA) rectangle (IP);
+
+    \only<1>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (IA) rectangle (ID);
+    \only<2>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (IE) rectangle (IH);
+    \only<3>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (II) rectangle (IL);
+    \only<4>\filldraw[fill=blue!60, draw=black, thick, opacity=.9] (IM) rectangle (IP);
+
+    \draw[black, very thick] (IA) rectangle (IP);
+    \draw[black, thin] (IA) grid (IP);
+    % \draw[black, dashed] (I1) -- (I3) -- (I2) -- (R5) -- (R6) -- (L5);
+  \end{scope}
+
+  \begin{scope}[
+      yshift=170,
+      every node/.append style={yslant=-0.6,xslant=1.0},
+      yslant=-0.6,xslant=1.0]
+
+    \coordinate (OA) at (2,2);
+    \coordinate (OB) at (2,3);
+    \coordinate (OC) at (3,2);
+    \coordinate (OD) at (3,3);
+    \coordinate (OE) at (2,3);
+    \coordinate (OF) at (2,4);
+    \coordinate (OG) at (3,3);
+    \coordinate (OH) at (3,4);
+    \coordinate (OI) at (3,2);
+    \coordinate (OJ) at (3,3);
+    \coordinate (OK) at (4,2);
+    \coordinate (OL) at (4,3);
+    \coordinate (OM) at (3,3);
+    \coordinate (ON) at (3,4);
+    \coordinate (OO) at (4,3);
+    \coordinate (OP) at (4,4);
+
+    \coordinate (O1) at (1,1);
+    \coordinate (O2) at (5,5);
+    \coordinate (O3) at (1,5);
+    \coordinate (O4) at (5,1);
+
+    % \coordinate (Q) at (intersection of IA--OA and I1--I3);
+    % \coordinate (R) at (intersection of IA--OA and O1--O4);
+    % \only<1>\draw[opacity=0.2] (IA) -- (Q) (IB) -- (Q);
+    % \only<1>\draw[opacity=0.5] (Q) -- (R);
+    % \only<1>\draw[opacity=0.2] (R) -- (OA);
+
+    \only<1>\draw[opacity=0.5] (IA) -- (OA) (IB) -- (OB) (IC) -- (OC) (ID) -- (OD);
+    \only<2>\draw[opacity=0.5] (IE) -- (OE) (IF) -- (OF) (IG) -- (OG) (IH) -- (OH);
+    \only<3>\draw[opacity=0.5] (II) -- (OI) (IJ) -- (OJ) (IK) -- (OK) (IL) -- (OL);
+    \only<4>\draw[opacity=0.5] (IM) -- (OM) (IN) -- (ON) (IO) -- (OO) (IP) -- (OP);
+
+    \fill[green!80!blue, opacity=.9] (OA) rectangle (OP);
+
+    \only<1>\filldraw[fill=green!60!blue, draw=black, thick, opacity=.9] (OA) rectangle (OD);
+    \only<2>\filldraw[fill=green!60!blue, draw=black, thick, opacity=.9] (OB) rectangle (OH);
+    \only<3>\filldraw[fill=green!60!blue, draw=black, thick, opacity=.9] (OI) rectangle (OL);
+    \only<4>\filldraw[fill=green!60!blue, draw=black, thick, opacity=.9] (OM) rectangle (OP);
+
+    \draw[black, very thick] (OA) rectangle (OP);
+    \draw[black, thin] (OA) grid (OP);
+    \draw[black, dashed] (O1) rectangle (O2);
+  \end{scope}
+
+  \begin{scope}[
+      every node/.append style={yslant=-0.6,xslant=1.2},
+      yslant=-0.6,xslant=1.2]
+
+    % \filldraw[fill=white, draw=black, dashed, opacity=.6] (I1) rectangle (I2);
+    % \filldraw[fill=white, draw=black, dashed, opacity=.6] (O1) rectangle (O2);
+  \end{scope}
+\end{tikzpicture}
+\endinput

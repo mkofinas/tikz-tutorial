@@ -1,0 +1,121 @@
+\usetheme{metropolis}
+\usefonttheme{professionalfonts}
+% \usepackage[T1]{fontenc}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamertemplate{title page}[default]
+\setbeamercolor{block title}{bg=blue!30}
+\metroset{block=fill}
+
+\title[TikZ]
+{\TikZ Is All You Need}
+
+% Logo only on title page
+\titlegraphic{
+    \begin{tikzpicture}[overlay, remember picture]
+        \node[anchor=north west, xshift=0.87cm, yshift=1.8cm] at (current page.south west){
+            \includegraphics[width=5cm]{./img/logo/logoUvA_en.pdf}
+        };
+    \end{tikzpicture}
+}
+
+\author[Kofinas~M.]{Miltos~Kofinas}
+
+\institute[UvA]
+{%
+University of Amsterdam\\
+Amsterdam, Netherlands
+}
+
+\date[13 July 2022]
+{Thinking Hour, 13 July 2022}
+
+\subject{TikZ}
+
+\hypersetup{%
+  pdfinfo={%
+    Title={TikZ Is All You Need},
+    Subject={TikZ, LaTeX},
+    Author={Miltiadis Kofinas},
+  }
+}
+
+\AtBeginSection[]
+{%
+}
+
+% Math
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+
+% Bibliography
+\usepackage[language=english,autolang=other,style=numeric,backend=biber,
+hyperref=true,defer numbers=true,maxcitenames=1,minbibnames=3]{biblatex}
+\addbibresource{./sections/bibliography.bib}
+\AtEveryBibitem{%
+\clearfield{eprint}
+\clearfield{file}
+\clearfield{urldate}
+}
+\usepackage{ragged2e}
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+\usepackage{xparse}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{authblk}
+\usepackage{multimedia}
+\usepackage{xspace}
+
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+
+\captionsetup{font=scriptsize,labelfont=tiny}
+\renewcommand*\footnoterule{}
+
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\usepackage{xcolor}
+
+\usepackage{colortbl}
+\usepackage[normalem]{ulem}
+
+\newcommand{\TikZ}{\textnormal{{\fontfamily{lmr}\selectfont Ti\textit{k}Z}}\xspace}
+
+\newcounter{density}
+
+\newcommand\pro{\item[\textcolor{green}{+}]}
+\newcommand\con{\item[\textcolor{red}{--}]}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\usepackage{minted}
+\setminted{fontsize=\tiny}
+\setminted{linenos}
+\setminted{breaklines}
+\renewcommand{\theFancyVerbLine}{\sffamily \color{codegray}{\oldstylenums{\arabic{FancyVerbLine}}}}
+
+\usepackage{multimedia}
+
+\endinput

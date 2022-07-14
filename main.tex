@@ -1,0 +1,27 @@
+\documentclass[
+usenames,dvipsnames,
+  hyperref={colorlinks=true,urlcolor=blue},
+]{beamer}
+
+\usepackage{./preamble}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \maketitle
+    \begin{tikzpicture}[remember picture, overlay]
+        \def\xmargin{1cm}     % Left and right margin of the title line
+        \def\yshift{2cm}   % Moves the title line upwards (-1.25cm moves title line downwards)
+
+        \draw[mLightBrown,line width=0.5pt] (current page.west) ++(\xmargin,\yshift) -- ++({\paperwidth-2*\xmargin},0);
+    \end{tikzpicture}
+\end{frame}
+
+\input{./sections/presentation}
+
+\nocite{*}
+\begin{frame}[t,allowframebreaks]
+  \frametitle{References}
+  \printbibliography%
+\end{frame}
+\end{document}

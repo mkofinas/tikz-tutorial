@@ -1,0 +1,363 @@
+\section{Introduction}
+
+\begin{frame}{What is PGF/\TikZ?}
+    \begin{itemize}
+        \item Author: Till Tantau (University of L{\" u}beck)
+        \item PGF: “Portable Graphics Format” (backend)
+        \item \TikZ: “\TikZ ist \emph{kein} Zeichenprogramm” (frontend) (German for "\TikZ is \emph{not} a drawing program")
+        \item Current version: 3.1.9a, \emph{1321 page manual}, {\scriptsize\url{https://pgf-tikz.github.io/pgf/pgfmanual.pdf}}
+    \end{itemize}
+\end{frame}
+
+\section{Showcase}
+
+\begin{frame}{Showcase - Example \#1}
+    \begin{figure}
+        \centering
+        \begin{subfigure}[c]{0.3\textwidth}
+            \centering
+            \begin{adjustbox}{width=0.98\textwidth}
+                \input{img/examples/rotated_hexagon}
+            \end{adjustbox}
+        \end{subfigure}
+        \begin{subfigure}[c]{0.3\textwidth}
+            \centering
+            \begin{adjustbox}{width=0.98\textwidth}
+                \input{img/examples/rotated_pentagon}
+            \end{adjustbox}
+        \end{subfigure}
+        \begin{subfigure}[c]{0.3\textwidth}
+            \centering
+            \begin{adjustbox}{width=0.98\textwidth}
+                \input{img/examples/rotated_square}
+            \end{adjustbox}
+        \end{subfigure}
+    \end{figure}
+    \textbf{Source}: {\scriptsize\url{https://texample.net/tikz/examples/rotated-polygons/}}
+    \\
+    \textbf{Size}: 76 lines of code
+\end{frame}
+
+\begin{frame}{Showcase - Example \#2}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.7\textheight]{img/examples/poincare.pdf}
+    \end{figure}
+    \textbf{Source}: {\scriptsize\url{https://texample.net/tikz/examples/poincare/}}
+    \\
+    \textbf{Size}: 168 lines of code
+\end{frame}
+
+\begin{frame}{Showcase - Example \#3}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth]{img/examples/computer-science-mindmap.pdf}
+        \caption*{}
+        \label{fig:compscimindmap}
+    \end{figure}
+    \textbf{Source}: {\scriptsize\url{https://texample.net/tikz/examples/computer-science-mindmap/}}
+    \\
+    \textbf{Size}: 29 lines of code
+\end{frame}
+
+\begin{frame}{\TikZ\ - Pros and Cons}
+    With \TikZ you get all the \textbf{advantages} of the “\TeX-approach to typesetting” for your graphics:
+    \begin{itemize}
+        \pro Quick creation of simple graphics
+        \pro Precise positioning
+        \pro Use of macros
+        \pro Often superior typography
+        \pro \emph{Code suggestions from CoPilot!}
+    \end{itemize}
+You also inherit all the \textbf{disadvantages}:
+    \begin{itemize}
+        \con Steep learning curve
+        \con No WYSIWYG
+        \con Small changes require a long recompilation time
+        \con The code does not really “show” how things will look like
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Hello World++: A Picture for Karl’s Students}
+    \begin{figure}
+        \centering
+        \begin{adjustbox}{width=0.9\textwidth}
+            \input{img/tutorial/karl/karl}
+        \end{adjustbox}
+    \end{figure}
+    \textbf{Source}: {\scriptsize\url{https://texample.net/tikz/examples/tutorial/}}
+    \\
+    \textbf{Size}: 46 lines of code
+\end{frame}
+
+\begin{frame}{Hello World (1) - Drawing}
+  \begin{columns}
+    \begin{column}{0.35\textwidth}
+      \input{img/tutorial/karl/karl_step_1}
+    \end{column}
+    \begin{column}{0.65\textwidth}
+      \inputminted{TeX}{img/tutorial/karl/karl_step_1_standalone.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Hello World (2) - Arguments}
+  \begin{columns}
+    \begin{column}{0.35\textwidth}
+      \input{img/tutorial/karl/karl_step_2}
+    \end{column}
+    \begin{column}{0.65\textwidth}
+      \inputminted[firstline=6,lastline=10]{TeX}{img/tutorial/karl/karl_step_2_standalone.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Hello World (3) - Styles}
+  \begin{columns}
+    \begin{column}{0.35\textwidth}
+      \input{img/tutorial/karl/karl_step_3}
+    \end{column}
+    \begin{column}{0.65\textwidth}
+      \inputminted[firstline=5,lastline=13]{TeX}{img/tutorial/karl/karl_step_3_standalone.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Hello World++: A Picture for Karl’s Students}
+    \inputminted[lastline=26]{TeX}{img/tutorial/karl/karl.tex}
+\end{frame}
+\begin{frame}{Hello World++: A Picture for Karl’s Students}
+    \inputminted[firstline=27]{TeX}{img/tutorial/karl/karl.tex}
+\end{frame}
+
+\begin{frame}{\TikZ for Neural Networks}
+    \begin{itemize}
+        \item A simple MLP
+        \item Transformers
+        \item Graph Networks
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{A simple MLP}
+  \begin{figure}
+    \centering
+    \begin{adjustbox}{height=0.88\textheight, center}
+      \input{./img/tutorial/mlp/mlp.tex}
+    \end{adjustbox}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{A simple MLP}
+  \begin{columns}
+    \begin{column}{0.26\textwidth}
+      \begin{figure}
+        \centering
+        \begin{adjustbox}{height=0.48\textheight, center}
+          \input{./img/tutorial/mlp/mlp_step_1.tex}
+        \end{adjustbox}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.74\textwidth}
+      \inputminted[]{TeX}{img/tutorial/mlp/mlp_step_1.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{A simple MLP}
+  \begin{columns}
+    \begin{column}{0.26\textwidth}
+      \begin{figure}
+        \centering
+        \begin{adjustbox}{height=0.48\textheight, center}
+          \input{./img/tutorial/mlp/mlp_step_2.tex}
+        \end{adjustbox}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.74\textwidth}
+      \inputminted[]{TeX}{img/tutorial/mlp/mlp_step_2.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{A simple MLP}
+  \begin{columns}
+    \begin{column}{0.26\textwidth}
+      \begin{figure}
+        \centering
+        \begin{adjustbox}{width=0.98\textwidth, center}
+          \input{./img/tutorial/mlp/mlp.tex}
+        \end{adjustbox}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.74\textwidth}
+      \inputminted[]{TeX}{img/tutorial/mlp/mlp.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{\sout{Attention}\TikZ Is All You Need}
+  \begin{figure}
+    \centering
+    \resizebox{!}{0.9\textheight}{%
+      \input{./img/tutorial/transformers/transformers.tex}
+    }
+  \end{figure}
+\end{frame}
+
+\begin{frame}{\sout{Attention}\TikZ Is All You Need}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{figure}
+      \centering
+      \resizebox{!}{0.9\textheight}{%
+        \input{./img/tutorial/transformers/transformers_step_1.tex}
+      }
+    \end{figure}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    \inputminted[]{TeX}{img/tutorial/transformers/transformers_step_1.tex}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{\sout{Attention}\TikZ Is All You Need}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{figure}
+      \centering
+      \resizebox{!}{0.9\textheight}{%
+        \input{./img/tutorial/transformers/transformers_step_2.tex}
+      }
+    \end{figure}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    \inputminted[firstline=7,lastline=7]{TeX}{img/tutorial/transformers/transformers.tex}
+    {\tikz \node[inner ysep=0pt] (dots) {$\vdots$};}
+    \inputminted[firstline=13,lastline=13]{TeX}{img/tutorial/transformers/transformers.tex}
+    {\tikz \node[inner ysep=0pt] (dots) {$\vdots$};}
+    \inputminted[firstline=29,lastline=36]{TeX}{img/tutorial/transformers/transformers.tex}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{\sout{Attention}\TikZ Is All You Need}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{figure}
+      \centering
+      \resizebox{!}{0.9\textheight}{%
+        \input{./img/tutorial/transformers/transformers_step_2.tex}
+      }
+    \end{figure}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    \inputminted[firstline=7,lastline=7]{TeX}{img/tutorial/transformers/transformers.tex}
+    \begin{tikzpicture}
+      \node[inner ysep=0pt] (dots) {$\vdots$};
+      \node[right=of dots,yshift=-2pt,inner ysep=0pt, red!80] (dots2) {\scriptsize This is inline \TikZ!};
+      \draw[-Straight Barb, thick, red!80] (dots2) -- (dots.east|-dots2);
+    \end{tikzpicture}
+    \inputminted[firstline=13,lastline=13]{TeX}{img/tutorial/transformers/transformers.tex}
+    \begin{tikzpicture}
+      \node[inner ysep=0pt] (dots) {$\vdots$};
+      \node[right=of dots,yshift=-2pt,inner ysep=0pt, red!80] (dots2) {\scriptsize This is inline \TikZ!};
+      \draw[-Straight Barb, thick, red!80] (dots2) -- (dots.east|-dots2);
+    \end{tikzpicture}
+    \inputminted[firstline=29,lastline=36]{TeX}{img/tutorial/transformers/transformers.tex}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{\sout{Attention}\TikZ Is All You Need}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{figure}
+      \centering
+      \resizebox{!}{0.9\textheight}{%
+        \input{./img/tutorial/transformers/transformers.tex}
+      }
+    \end{figure}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    \inputminted[firstline=21,lastline=25]{TeX}{img/tutorial/transformers/transformers.tex}
+    {\tikz \node[inner ysep=0pt] (dots) {$\vdots$};}
+    \inputminted[firstline=27,lastline=27]{TeX}{img/tutorial/transformers/transformers.tex}
+    {\tikz \node[inner ysep=0pt] (dots) {$\vdots$};}
+    \inputminted[firstline=38,lastline=41]{TeX}{img/tutorial/transformers/transformers.tex}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{\sout{Attention}\TikZ Is All You Need}
+  \begin{figure}
+    \centering
+    \resizebox{!}{0.9\textheight}{%
+      \input{./img/tutorial/transformers/transformers.tex}
+    }
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Graph Network Flavours}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{./img/tutorial/gnn/82-Figure17-1.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[t]{Final notes}
+    \begin{itemize}
+        \item You can use \TikZ inline!
+        \item You can export Matplotlib to pgf!
+          \begin{itemize}
+            \item \url{https://matplotlib.org/stable/tutorials/text/pgf.html}
+          \end{itemize}
+        \item Same with programming: Learn-by-doing!
+    \end{itemize}
+    \tikz[overlay] \draw[scale=0.3,domain=-6.28:6.28,smooth,samples=201,variable=\t] plot ({30+\t*sin(\t r)},{-4+\t*cos(\t r)})
+      node[label={[red!80]right:Inline \TikZ}] () {};
+\end{frame}
+
+\begin{frame}{Personal portfolio collage}
+  \begin{figure}
+    \includegraphics[width=0.98\textwidth]{./img/portfolio/scene_graph_generation.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Personal portfolio collage}
+  \begin{figure}
+    \includegraphics[height=0.9\textheight]{./img/portfolio/visual_genome_1.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Personal portfolio collage}
+  \begin{figure}
+    \includegraphics[height=0.9\textheight]{./img/portfolio/visual_genome_2.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Personal portfolio collage}
+  \begin{figure}
+    \includegraphics[width=0.98\textwidth]{./img/portfolio/model_architecture.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Personal portfolio collage}
+  \begin{figure}
+    \resizebox{!}{0.9\textheight}{%
+      \input{./img/tutorial/conv/conv_3d}
+    }
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Personal portfolio collage}
+  \begin{figure}
+    \centering
+    \tikz[remember picture]{\node[inner sep=0pt](rotinput){
+    \movie[height = 0.7\textwidth, width = 0.762\textwidth, open]
+      {\includegraphics[height = 0.7\textwidth, width=0.762\textwidth]{./img/portfolio/locs_roto.png}}
+      {../img/portfolio/locs_roto.mp4}
+    }}
+  \end{figure}
+\end{frame}
+
+\endinput
