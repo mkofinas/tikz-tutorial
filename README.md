@@ -1,12 +1,15 @@
 #  Field Neural Networks for Interacting Dynamical Systems
-Presentation slides for my Ti_k_Z presentation entitled
+Presentation slides for my Ti*k*Z tutorial entitled
 <pre>
-<b>Ti<it>k</it>Z Is All You Need</b>
+<b>Ti<i>k</i>Z Is All You Need</b>
 Miltiadis Kofinas
+13 July 2022
 </pre>
-Presentation on "Thinking Hour", at the University of Amsterdam.
+Presented at "Thinking Hour", at the University of Amsterdam.
 
-![LoCS](figures/particles_in_field.png)
+![TikZ](pdf/main.pdf)
+
+You can find the presentation in the `pdf` directory. Alternatively, you can compile the `tex` files yourself.
 
 ## Compilation
 
