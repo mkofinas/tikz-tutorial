@@ -7,7 +7,7 @@ Miltiadis Kofinas
 </pre>
 Presented at "Thinking Hour", at the University of Amsterdam.
 
-![TikZ](pdf/main.pdf)
+![TikZ](img/main.png)
 
 You can find the presentation in the `pdf` directory. Alternatively, you can compile the `tex` files yourself.
 
