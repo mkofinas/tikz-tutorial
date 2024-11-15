@@ -1,4 +1,4 @@
-#  Field Neural Networks for Interacting Dynamical Systems
+# Ti*k*Z Tutorial
 Presentation slides for my Ti*k*Z tutorial entitled
 ![TikZ](img/main.png)
 Presented at "Thinking Hour", at the University of Amsterdam.
